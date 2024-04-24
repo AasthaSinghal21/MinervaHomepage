@@ -1,0 +1,125 @@
+button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+  .btn-16 {
+    border: none;
+    color: #000;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: #000;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+
+  .community{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    margin-bottom: 30px;
+  }
+
+
+  .left-comm{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 150px;
+  }
+
+  .left-comm > h1{
+     font-size: 70px;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+ /*SLIDES*/
+
+ .right-comm {
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 40%;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    margin: auto;
+  }
+  .slide {
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    inset: 0;
+    animation: slide-show 12s infinite;
+  }
+  
+  .slide-2 {
+    animation-delay: 4s;
+  }
+  
+  .slide-3 {
+    animation-delay: 8s;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  @keyframes slide-show {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    20%,
+    30% {
+      opacity: 1;
+      scale: 1.03;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
